@@ -47,5 +47,14 @@ namespace Login
             UriTemplate = "modUser")]
 
         string modUser(User user);
+
+        [OperationContract]
+        [WebInvoke(Method = "*",
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.Bare,
+            UriTemplate = "getUser/{id}")]
+
+        User getUser(string id);
     }
 }

@@ -28,6 +28,12 @@ namespace Login
             }
         }
 
+        public User getUser(string id)
+        {
+            Select s=new Select();
+            return getUser(id);
+        }
+
         public string modUser(User user)
         {
             Update u= new Update();

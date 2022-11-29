@@ -107,6 +107,7 @@
     <Compile Include="Queries\Create.cs" />
     <Compile Include="Queries\Delete.cs" />
     <Compile Include="Queries\Read.cs" />
+    <Compile Include="Queries\Select.cs" />
     <Compile Include="Queries\Update.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
