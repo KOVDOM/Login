@@ -16,7 +16,7 @@ namespace Login
         List<User> userList=new List<User>();
         public string delUser(User user)
         {
-            Delete d=new Delete();
+            Delete d = new Delete();
             if (d.deleteUser(user) > 0)
             {
                 return "Sikeres felhasználó törlés!";
