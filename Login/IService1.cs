@@ -19,7 +19,7 @@ namespace Login
             BodyStyle = WebMessageBodyStyle.Bare,
             UriTemplate = "regCheck")]
 
-        User regCheck(User user);
+        string regCheck(User user);
 
         [OperationContract]
         [WebInvoke(Method = "*",
@@ -29,5 +29,14 @@ namespace Login
             UriTemplate = "registration")]
 
         string registration(User user);
+
+        [OperationContract]
+        [WebInvoke(Method = "*",
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.Bare,
+            UriTemplate = "delUser")]
+
+        string delUser(User user);
     }
 }

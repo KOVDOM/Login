@@ -9,7 +9,7 @@ namespace Login.Queries
     public class Read
     {
         Connect c = new Connect();
-        public User authentical(string uname, string pwd)
+        public string authentical(string uname, string pwd)
         {
             try
             {
@@ -30,13 +30,13 @@ namespace Login.Queries
                     user.ban = dr.GetBoolean("ban");
                 }
 
-                return user;
+                return "A felhasználó id: "+user.Id+" a rank: "+user.rank;
             }
             catch (Exception)
             {
                 User user = new User();
                 user.Id = 0;
-                return user;
+                return "Hiba az adatbázisban!";
             }
         }
     }

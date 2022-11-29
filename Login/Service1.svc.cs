@@ -13,7 +13,22 @@ namespace Login
 {
     public class Service1 : IService1
     {
-        public User regCheck(User user)
+        List<User> userList=new List<User>();
+        public string delUser(User user)
+        {
+            Delete d=new Delete();
+            if (d.deleteUser(user) > 0)
+            {
+                return "Sikeres felhasználó törlés!";
+            }
+            else
+            {
+
+                return "Sikertelen felhasználó törlés!";
+            }
+        }
+
+        public string regCheck(User user)
         {
             Read r = new Read();
             return r.authentical(user.uname, user.pwd);
