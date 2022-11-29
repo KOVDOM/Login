@@ -38,5 +38,14 @@ namespace Login
             UriTemplate = "delUser")]
 
         string delUser(User user);
+
+        [OperationContract]
+        [WebInvoke(Method = "*",
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.Bare,
+            UriTemplate = "modUser")]
+
+        string modUser(User user);
     }
 }

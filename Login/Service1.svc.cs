@@ -28,6 +28,20 @@ namespace Login
             }
         }
 
+        public string modUser(User user)
+        {
+            Update u= new Update();
+            if (u.modifyUser(user) > 0)
+            {
+                return "Sikeres felhasználó modosítás!";
+            }
+            else
+            {
+
+                return "Sikertelen felhasználó modosítás!";
+            }
+        }
+
         public string regCheck(User user)
         {
             Read r = new Read();
